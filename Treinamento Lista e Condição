@@ -1,0 +1,189 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOsJDASyE2qTXbHOiZer8Rh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DouglasP15/Treinamento-Phyton-Generation-/blob/main/Treinamento%20Lista%20e%20Condi%C3%A7%C3%A3o\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "G0BOBsDz5y41"
+      },
+      "outputs": [],
+      "source": [
+        "#nosso desafio é mostrar os produtos de um mercado\n",
+        "# quero poder escolher os produtos pra ver as informaçoes\n",
+        "# quero poder adicionar novos produtos\n",
+        "# quero poder excluir um produto\n",
+        "\n",
+        "#-----\n",
+        "\n",
+        "#criar lista de variaveis globais do software\n",
+        "lista_produtos = ['Detergente',\n",
+        "                  'Refrigerante',\n",
+        "                  'Arroz',\n",
+        "                  'Feijão',\n",
+        "                  'Agua Mineral']\n",
+        "\n",
+        "lista_preco = [2.50, 5.00, 7.25, 4.00, 3.45]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# para criarmos uma função\n",
+        "# para criarmos um apanhado de código, devemos\n",
+        "# armazenar eles dentro de um bloco e dar um nome\n",
+        "\n",
+        "# função 1 - ver produtos\n",
+        "def ver_produtos():\n",
+        "  print(f'Os produtos que temos são: {lista_produtos}')\n",
+        "  print(f'e seus preços são: {lista_preco}')\n",
+        "\n",
+        "def adicionar_produtos():\n",
+        "  novo_produto = input('Informe o nome do produto: ')\n",
+        "  novo_preco = float(input('Informe o preço: '))\n",
+        "  lista_produtos.append(novo_produto)\n",
+        "  # /\\ CHAMAMOS A LISTA - ATRIBUIMOS A FUNÇÃO APPEND (ADICIONA) -\n",
+        "  # COLOCAMOS O QUE VAI SER ADICIONADO\n",
+        "  lista_preco.append(novo_preco)"
+      ],
+      "metadata": {
+        "id": "-LD3j6uu52hh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('---------MENU DO MERCADO----------')\n",
+        "print('Escolha a opção:')\n",
+        "print('1 - Ver produtos')\n",
+        "print('2 - Cadastrar novo produto')\n",
+        "opcao = int(input('Informe a opção desejada'))\n",
+        "\n",
+        "#o comando if serve para condicionar algo\n",
+        "#if condição operador(==) resposta:\n",
+        "if opcao == 1:\n",
+        "#oque ele deve executar\n",
+        "  ver_produtos()\n",
+        "#o comando elif é a combinação de if else (se não)\n",
+        "elif opcao == 2:\n",
+        "  adicionar_produtos()\n",
+        "  ver_produtos()\n",
+        "else:\n",
+        "  print('opção invalida')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g0Dgt9Zm58HP",
+        "outputId": "6bb7dbc9-2bab-4600-c7ed-4477fbcacb1b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "---------MENU DO MERCADO----------\n",
+            "Escolha a opção:\n",
+            "1 - Ver produtos\n",
+            "2 - Cadastrar novo produto\n",
+            "Informe a opção desejada3\n",
+            "opção invalida\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#DESAFIO PRATICO DA AULA\n",
+        "lista_nome_pets = ['Rodolfo',\n",
+        "              'Domenica',\n",
+        "              'Jullie',\n",
+        "              'Nemo',\n",
+        "              'Dentinho']\n",
+        "lista_especie_pets = ['Papagaio',\n",
+        "                   'Cachorro',\n",
+        "                   'Gato',\n",
+        "                   'Peixe',\n",
+        "                   'Coelho']\n",
+        "def ver_pets():\n",
+        "  print(f'Os nomes dos pets na lista são {lista_nome_pets}')\n",
+        "  print(f'E a especie respectivamente é {lista_especie_pets}')\n",
+        "\n",
+        "\n",
+        "def adicionar_pet():\n",
+        "  novo_pet = input('informe o nome do pet para cadastro ')\n",
+        "  nova_especie = input('Informe a especie desse pet ')\n",
+        "  lista_nome_pets.append(novo_pet)\n",
+        "  lista_especie_pets.append(nova_especie)\n",
+        "\n",
+        "print('---------MENU DE CADASTRO PET----------')\n",
+        "print('Escolha a opção:')\n",
+        "print('1 - Ver pets cadastrados')\n",
+        "print('2 - Cadastrar novo pet')\n",
+        "opcao = int(input('Informe a opção desejada '))\n",
+        "if opcao == 1:\n",
+        "  ver_pets()\n",
+        "elif opcao == 2:\n",
+        "  adicionar_pet()\n",
+        "  ver_pets()\n",
+        "else:\n",
+        "  print('opção invalida')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3o5dHImWEg7I",
+        "outputId": "2e2ee0f3-4451-4e71-b2ef-4c24d521bf6f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "---------MENU DE CADASTRO PET----------\n",
+            "Escolha a opção:\n",
+            "1 - Ver pets cadastrados\n",
+            "2 - Cadastrar novo pet\n",
+            "Informe a opção desejada 2\n",
+            "informe o nome do pet para cadastro Thor\n",
+            "Informe a especie desse pet cachorro\n",
+            "Os nomes dos pets na lista são ['Rodolfo', 'Domenica', 'Jullie', 'Nemo', 'Dentinho', 'Thor']\n",
+            "E a especie respectivamente é ['Papagaio', 'Cachorro', 'Gato', 'Peixe', 'Coelho', 'cachorro']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
