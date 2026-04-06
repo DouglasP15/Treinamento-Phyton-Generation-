@@ -1,0 +1,132 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO19hCNsFU2Sg4VMY0+aVot",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DouglasP15/Treinamento-Phyton-Generation-/blob/main/Declarando%20variaveis%20e%20print%2C%20input\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n"
+      ],
+      "metadata": {
+        "id": "CqsS-_Gvbigi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HgpMAjI0RVfr",
+        "outputId": "458d16cb-5ae5-4893-d16c-986f5003a02c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Meu nome é Douglas\n"
+          ]
+        }
+      ],
+      "source": [
+        "nome = \"Douglas\"\n",
+        "print(f\"Meu nome é {nome}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Declarando variaveis\n",
+        "nome = \"Douglas\"\n",
+        "idade = 27\n",
+        "cidade = \"Campinas\"\n",
+        "#printando informaçoes na tela usando as variaveis\n",
+        "print(f\"Meu nome é {nome}, tenho {idade} anos e moro em {cidade}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nmmiRMjiYvTC",
+        "outputId": "6e8b17b3-f8a7-4b69-f55d-ea226e1046ae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Meu nome é Douglas, tenho 27 anos e moro em Campinas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Função que recebe informação do teclado do usuario\n",
+        "nome2 = input(\"Qual o seu nome? \")\n",
+        "idade2 = input(\"Quantos anos você tem? \")\n",
+        "cidade2 = input(\"Em qual cidade você mora? \")\n",
+        "print(f\"Seu nome é {nome2}, Você tem {idade2} anos e mora em {cidade2}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2Fj5k7OudP1x",
+        "outputId": "69f05104-b12a-4241-a5b1-c5c75af90c06"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu nome? Douglas\n",
+            "Quantos anos você tem? 27\n",
+            "Em qual cidade você mora? Campinas\n",
+            "Seu nome é Douglas, Você tem 27 anos e mora em Campinas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "0QK8KEY-evv_"
+      }
+    }
+  ]
+}
